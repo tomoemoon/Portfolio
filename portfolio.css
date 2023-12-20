@@ -1,0 +1,129 @@
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-family:Century,'DotGothic16', sans-serif;
+    scroll-behavior: smooth;
+  }
+
+/*==========タイトル設定============================================================================================================*/
+p#title_word {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: left;
+  border-bottom: 5px solid #000;
+  display: inline-block;
+}
+p.text{
+  font-size: 18px;
+}
+
+/*==========タブの設定============================================================================================================*/
+/*背景設定*/
+.tabs {
+  padding-bottom: 3vw;
+  background-color: #f6f6f6;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;}
+
+/*タブのスタイル*/
+.tab_item {
+  width: calc(100%/4);
+  height: 50px;
+  border-bottom: 3px solid #021a3d;
+  background-color: #cacaca;
+  line-height: 50px;
+  font-size: 2.5vw;
+  text-align: center;
+  color: #565656;
+  display: block;
+  float: left;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+/*マウスカーソルが来たときの動作*/
+.tab_item:hover {
+  opacity: 0.5;
+  background-color: #8cc8ef;
+  font-size: 2vw;
+}
+
+/*ラジオボタンを全て消す*/
+input[name="tab_item"] {
+  display: none;
+}
+
+/*タブ切り替えの中身のスタイル*/
+.tab_content {
+  display: none;
+  padding: 3vw 3vw 0;
+  clear: both;
+  overflow: hidden;
+}
+
+/*選択されているタブのコンテンツのみを表示*/
+#profile:checked ~ #profile_content,
+#skills:checked ~ #skills_content,
+#robocon:checked ~ #robocon_content,
+#semi_study:checked ~ #semi_study_content{
+  display: block;
+}
+
+/*選択されているタブのスタイルを変える*/
+.tabs input:checked + .tab_item {
+  background-color: #4b52d7;
+  color: #ffffff;
+}
+
+#mechanic{
+  float: left;
+  width: calc(100%/3);
+}
+
+#program{
+  float: left;
+  width: calc(100%/3);
+}
+
+#other{
+  float: left;
+  width: calc(100%/3);
+}
+
+h1.skills{
+  margin: 0;
+  padding: 0;
+  font-size: 5vw;
+}
+h2{
+  margin-left: 1vw;
+  font-size: 3vw;
+}
+
+h1.text{
+  margin-top: 1vw;
+}
+
+.skill_text{
+  font-size: 2vw;
+  margin-left: 1.5vw;
+}
+
+p#profile{
+  font-size: 3vw;
+  top: 30%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-30%,-50%);
+}
+
+img#icon{
+  width: 30%;
+  height: 30%;
+}
+
+#flex{
+  display: flex;
+  position: relative;
+}
